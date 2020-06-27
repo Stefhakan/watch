@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Poppins';
+}
+
+header {
+  display: flex;
+  width: 90%;
+  height: 10vh;
+  align-items: center;
+  margin: auto;
+  border-bottom:  1px solid rgba(0, 0, 0, .07);
+}
+
+.logo img {
+  width: 15rem;
+}
+.logo {
+
+  flex: 1;
+}
+
+nav {
+  flex: 3;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-left: 20rem;
+}
+.nav-item {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: rgb(190, 123, 35);
+}
+
+.cart {
+
+  flex: .5;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fa-shopping-cart {
+  font-size: 1.6rem;
+  cursor: pointer;
+  
+}
+
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+}
+.cover img {
+  height: 100%;
+  animation: drop 1.7s ease;
+}
+.intro {
+  flex: 1;
+}
+.intro-text, .cta {
+  padding: 0 0 0 5rem;
+}
+.intro-text h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.intro-text p {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.cover {
+  flex: 1;
+  height: 50vh;
+}
+
+.cta {
+  padding-top: 3rem;
+}
+.cta-select {
+  border: 2px solid rgb(62, 116, 69);
+  color:rgb(62, 116, 69);
+  background: transparent;
+  height: 3rem;
+  width: 11rem;
+  font-family: 'Poppins';
+  transition: all .5s ease;
+  cursor: pointer;
+}
+.cta-select:hover {
+  border: 2px solid rgb(62, 116, 69);
+  color:white;
+  background: rgb(62, 116, 69);
+}
+.cta-order {
+  border: none;
+  color: white;
+  background: rgb(62, 116, 69);
+  height: 3rem;
+  width: 11rem;
+  font-family: 'Poppins';
+  margin-left: 2rem;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+.cta-order:hover {
+  border: 2px solid rgb(62, 116, 69);
+  color: rgb(62, 116, 69);
+  background: transparent;
+}
+
+.watch-select {
+  width: 15%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  right: 26%;
+  z-index: 1;
+  bottom: 15%;
+}
+
+.watch-select i {
+  cursor: pointer;
+}
+
+.watch-select .one, .watch-select .two {
+  opacity: .3;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: rgb(54, 100, 60);
+  height: 7vh;
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-list {
+    padding: 0;
+  }
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .cover img {
+    height: 80%;
+  }
+  .watch-select {
+    bottom: 10%;
+    right: 43%;
+  }
+.intro-text h1 {
+  font-size: 3rem;
+  }
+  .intro-text p {
+    font-size: 1.3rem;
+  }
+  .intro {
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .cta {
+    padding: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3rem;
+  }
+  .cta-select, .cta-order {
+    height: 3rem;
+    width: 8rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .nav-list {
+    padding: 0;
+  }
+  .logo img {
+    width: 10rem    ;
+  }
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .cover img {
+    height: 60%;
+    padding-left: 5rem;
+  }
+  .watch-select {
+    bottom: 10%;
+    right: 43%;
+    font-size: 1rem;
+  }
+  .intro-text {
+    padding: 0;
+  }
+  .intro-text h1 {
+  font-size: 3rem;
+  }
+  .intro-text p {
+    font-size: 1.3rem;
+  }
+  .intro {
+    padding-top: 10rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .cta {
+    padding: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0rem;
+
+  }
+  .cta-select, .cta-order {
+    height: 3rem;
+    width: 8rem;
+  }
+  footer {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .nav-list {
+    padding: 0;
+  }
+  .logo img {
+    width: 10rem    ;
+  }
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .cover img {
+    height: 60%;
+    padding-left: 5rem;
+  }
+  .watch-select {
+    bottom: 10%;
+    right: 43%;
+    font-size: 1rem;
+  }
+  .intro-text {
+    padding: 0;
+  }
+  .intro-text h1 {
+  font-size: 3rem;
+  }
+  .intro-text p {
+    font-size: 1.3rem;
+  }
+  .intro {
+    padding-top: 10rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .cta {
+    padding: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0rem;
+
+  }
+  .cta-select, .cta-order {
+    height: 3rem;
+    width: 8rem;
+  }
+  footer {
+    bottom: 0;
+  }
+}
+
